@@ -1,0 +1,24 @@
+{
+  "name": "cancer_research_uk",
+  "version": "1.0.0",
+  "description": "Task from Cancer Research UK",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bondarchukm/cancer_research_uk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bondarchukm/cancer_research_uk/issues"
+  },
+  "homepage": "https://github.com/bondarchukm/cancer_research_uk#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2"
+  },
+  "dependencies": {
+    "prettier": "^3.0.1"
+  }
+}
