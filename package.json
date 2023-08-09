@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Task from Cancer Research UK",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bondarchukm/cancer_research_uk.git"
@@ -19,6 +21,7 @@
     "@playwright/test": "^1.36.2"
   },
   "dependencies": {
-    "prettier": "^3.0.1"
+    "prettier": "^3.0.1",
+    "sat-utils": "^1.10.0"
   }
 }
