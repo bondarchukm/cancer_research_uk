@@ -22,7 +22,9 @@ export class DonationPage extends AbstractPage {
     this.motivationSelectionDropdown = page.locator(
       '[data-testid="selectMotivation"]',
     );
-    this.chooseCancerTypeButton = page.locator('[id="destinationRadioGroup1"]+div');
+    this.chooseCancerTypeButton = page.locator(
+      '[id="destinationRadioGroup1"]+div',
+    );
     this.cancerTypeSelectionDropdown = page.locator(
       '[data-testid="restrictionSelect"]',
     );
@@ -33,7 +35,7 @@ export class DonationPage extends AbstractPage {
     await this.page.waitForLoadState('domcontentloaded');
   }
 
-  async fillDonationPageInfo(): Promise<void> {
+  async fillDonationData(): Promise<void> {
     await this.acceptCookiesIfDisplayed();
 
     await this.otherAmountInput.fill(DONATION.amount);
