@@ -16,3 +16,9 @@ export const DETAILS = {
     country: 'United Kingdom',
   },
 };
+
+export const PAYMENT_CARD = {
+  cardNumber: '4000000000001000',
+  cvv: '123',
+  cardExpiry: '1225',
+};
