@@ -23,13 +23,13 @@ export class AbstractPage {
     await this.page.waitForLoadState('domcontentloaded');
   }
 
-  async acceptCookiesIfDisplayed(): Promise<void> {
+  async acceptCookiesIfModalDisplayed(): Promise<void> {
     if (await this.waitForElemIsVisible(this.acceptCookiesButton)) {
       await this.acceptCookiesButton.click();
     }
   }
 
-  async waitForElemIsVisible(elem, timeout = 2000, interval = 500) {
+  async waitForElemIsVisible(elem: Locator, timeout = 2000, interval = 500) {
     return await waitForCondition(
       async () => {
         return await elem.isVisible();
