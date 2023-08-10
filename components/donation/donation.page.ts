@@ -36,7 +36,7 @@ export class DonationPage extends AbstractPage {
   }
 
   async fillDonationData(): Promise<void> {
-    await this.acceptCookiesIfDisplayed();
+    await this.acceptCookiesIfModalDisplayed();
 
     await this.otherAmountInput.fill(DONATION.amount);
     await this.myOwnMoneyButton.click();
