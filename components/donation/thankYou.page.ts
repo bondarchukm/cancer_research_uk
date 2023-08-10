@@ -19,12 +19,18 @@ export class ThankYouPage extends AbstractPage {
   }
 
   async getDonationReferenceFromResponse(page: Page): Promise<string> {
-    const responsePromise = page.waitForResponse((response) =>
-      response.url().includes('/transaction'),
-    );
+    let donationReference: string;
 
-    const response = await responsePromise;
-    const donationReference = (await response.json()).id;
+    try {
+      const responsePromise = page.waitForResponse((response) =>
+        response.url().includes('/transaction'),
+      );
+
+      const response = await responsePromise;
+      donationReference = (await response.json()).id;
+    } catch (err) {
+      throw new Error(`Response is not received: ${err}`);
+    }
 
     return donationReference;
   }
