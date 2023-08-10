@@ -4,7 +4,11 @@
   "description": "Task from Cancer Research UK",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test-chrome": "npx playwright test --project=chromium",
+    "test-firefox": "npx playwright test --project=firefox",
+    "test-safari": "npx playwright test --project=webkit",
+    "test-iphone": "npx playwright test --project=iphone",
+    "test-ipad": "npx playwright test --project=ipad"
   },
   "repository": {
     "type": "git",
