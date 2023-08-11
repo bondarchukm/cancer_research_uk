@@ -13,30 +13,30 @@ Below you can find the list of commands to run tests on different browsers/devic
 ### To run tests:
 Run next command first:
 
-- npm i
+- **npm i**
 
 And then run one of the next commands:
 
 // to run tests on Chrome browser
 
-- npm run test-chrome
+- **npm run test-chrome**
 
 // to run tests on Firefox browser
 
-- npm run test-firefox
+- **npm run test-firefox**
 
 // to run tests on Safari browser
 
-- npm run test-safari
+- **npm run test-safari**
 
 // to run tests on iPhone emulation
 
-- npm run test-iphone
+- **npm run test-iphone**
 
 // to run tests on iPad emulation
 
-- npm run test-ipad
+- **npm run test-ipad**
 
 ### Accessibility testing:
-You can find accessibility test reports in html format for Donation, Details and Payment pages at test-resuls/accessibilityReports/ folder.
+You can find accessibility test reports in html format for Donation, Details and Payment pages at **test-resuls/accessibilityReports/** folder.
 ThankYou page is not included to accessibility testing scope due to payment restrictions issue mentioned above.
