@@ -22,9 +22,11 @@
   },
   "homepage": "https://github.com/bondarchukm/cancer_research_uk#readme",
   "devDependencies": {
-    "@playwright/test": "^1.36.2"
+    "@playwright/test": "^1.36.2",
+    "axe-html-reporter": "^2.2.3"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.7.3",
     "prettier": "^3.0.1",
     "sat-utils": "^1.10.0"
   }
