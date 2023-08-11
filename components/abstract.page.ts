@@ -1,5 +1,6 @@
 import { type Locator, type Page } from '@playwright/test';
 import { waitForCondition } from 'sat-utils';
+import { AxeBuilder, type axe } from '@axe-core/playwright';
 
 export class AbstractPage {
   readonly page: Page;
@@ -9,7 +10,7 @@ export class AbstractPage {
   constructor(page: Page) {
     this.page = page;
 
-    // Cookies modal locators
+    // Accept Cookies modal locators
     this.acceptCookiesButton = page.locator(
       '[id="onetrust-accept-btn-handler"]',
     );
@@ -40,5 +41,15 @@ export class AbstractPage {
         dontThrow: true,
       },
     );
+  }
+
+  async analizeAccessibility(page: Page): Promise<axe.AxeResults> {
+    const result = await new AxeBuilder({
+      page,
+    })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
+      .analyze();
+
+    return result;
   }
 }
